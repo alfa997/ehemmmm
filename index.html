@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kritik & Saran alfaRow</title>
+  <link rel="stylesheet" href="style.css" />
+      <!-- Favicon dari URL langsung -->
+<link rel="icon" type="image/png" href="https://files.catbox.moe/e4q7oj.jpg" sizes="32x32">
+<link rel="apple-touch-icon" href="https://files.catbox.moe/e4q7oj.jpg">
+</head>
+<body>
+  <div class="card">
+    <h2>Kritik & Saran untuk projek toko</h2>
+    <form id="kritikForm">
+      <input type="text" name="nama" placeholder="Nama Anda" required />
+      <textarea name="pesan" placeholder="Tulis kritik atau saran Anda..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    
+    <p id="notif" class="notif-sukses"></p>
+    
+    <div class="admin-login-link">
+      <a href="/alfa/daffa.html">Login Admin</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <script>
+  const emojis = ["💬", "✨", "❤️", "📣", "📝", "🎉"];
+  const count = 25;
+
+  function generateFlyingEmoji() {
+    for (let i = 0; i < count; i++) {
+      const emoji = document.createElement("div");
+      emoji.classList.add("floating");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = `${Math.random() * 100}%`;
+      emoji.style.fontSize = `${16 + Math.random() * 24}px`;
+      emoji.style.animationDuration = `${4 + Math.random() * 4}s`;
+      document.body.appendChild(emoji);
+    }
+  }
+
+  // Langsung aktif saat halaman dibuka
+  window.addEventListener("DOMContentLoaded", generateFlyingEmoji);
+</script>
+</body>
+</html>

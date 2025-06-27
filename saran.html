@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritik & Saran | Nama Perusahaan</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container fade-in">
+        <!-- Header -->
+        <header class="glassmorphism">
+            <h1 class="text-gradient">KRITIK & SARAN</h1>
+            <p>Suara Anda membantu kami menjadi lebih baik</p>
+        </header>
+
+        <!-- Feedback Form -->
+        <div class="form-container glassmorphism slide-up">
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Nama Anda</label>
+                    <input type="text" id="name" required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Jenis Pesan</label>
+                    <select id="type" required>
+                        <option value="" disabled selected>Pilih jenis</option>
+                        <option value="kritik">Kritik</option>
+                        <option value="saran">Saran</option>
+                        <option value="pujian">Pujian</option>
+                        <option value="keluhan">Keluhan</option>
+                    </select>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan Anda</label>
+                    <textarea id="message" rows="5" required></textarea>
+                    <div class="underline"></div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>Kirim Pesan</span>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <!-- Floating Admin Link -->
+        <a href="../admin/login.html" class="admin-float pulse">
+            <i class="admin-icon">👑</i>
+        </a>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content glassmorphism">
+            <span class="close-modal">&times;</span>
+            <h2>Terima Kasih!</h2>
+            <p>Pesan Anda telah berhasil dikirim.</p>
+            <div class="checkmark">✓</div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

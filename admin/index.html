@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Kritik & Saran</title>
+    <link rel="stylesheet" href="/admin/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">👑</div>
+            <span>Admin Panel</span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#messages">
+                        <i class="fas fa-envelope"></i>
+                        <span>Pesan Masuk</span>
+                        <span class="badge">24</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#analytics">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            
+            <div class="user-menu">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <span>Admin User</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="content">
+            <!-- Stats Cards -->
+            <div class="row">
+                <div class="card stat-card">
+                    <div class="card-icon blue">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Total Pesan</h3>
+                        <h1>1,248</h1>
+                    </div>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon green">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pujian</h3>
+                        <h1>452</h1>
+                    </div>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon orange">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Saran</h3>
+                        <h1>623</h1>
+                    </div>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon red">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Kritik</h3>
+                        <h1>173</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Messages and Charts -->
+            <div class="row">
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h2>Pesan Terbaru</h2>
+                        <a href="#view-all" class="view-all">Lihat Semua</a>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Jenis</th>
+                                    <th>Pesan</th>
+                                    <th>Tanggal</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Budi Santoso</td>
+                                    <td>budi@email.com</td>
+                                    <td><span class="badge green">Saran</span></td>
+                                    <td class="truncate">Mungkin bisa ditambahkan fitur...</td>
+                                    <td>12 Mei 2023</td>
+                                    <td>
+                                        <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- More rows would be loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h2>Distribusi Pesan</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="messageChart" class="chart-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/chart.js"></script>
+</body>
+</html>
