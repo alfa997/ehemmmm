@@ -1,3 +1,75 @@
 <!DOCTYPE html>
-<!-- (HTML panjang kamu dengan semua perubahan yang dijelaskan sebelumnya dimasukkan di sini) -->
-<!-- Untuk alasan teknis, tidak semua isi HTML ditampilkan di sini, tapi sudah disiapkan di file zip yang akan dikirim.) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyek Animasi + WhatsApp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .animated-bg {
+      background: linear-gradient(-45deg, #93c5fd, #fcd34d, #fca5a5, #6ee7b7);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: float 10s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-80px) rotate(30deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+  </style>
+</head>
+<body class="animated-bg min-h-screen flex items-center justify-center overflow-hidden relative">
+
+  <!-- Emoji -->
+  <div class="emoji" style="top: 10%; left: 20%; animation-delay: 0s;">🚀</div>
+  <div class="emoji" style="top: 30%; left: 70%; animation-delay: 2s;">💻</div>
+  <div class="emoji" style="top: 60%; left: 10%; animation-delay: 4s;">🎯</div>
+  <div class="emoji" style="top: 80%; left: 80%; animation-delay: 6s;">🔥</div>
+
+  <!-- Card -->
+  <div class="bg-white bg-opacity-90 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-96 z-10
+              transform transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,0,0,0.2)]">
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">🚀 Proyek AlfaRow Storee</h2>
+    <p class="text-gray-600 mb-6">Status pengerjaan proyek kamu saat ini:</p>
+
+    <div class="flex justify-between text-sm mb-2">
+      <span class="text-gray-500">Progress</span>
+      <span class="font-semibold text-gray-800">56%</span>
+    </div>
+
+    <div class="w-full bg-gray-200 h-4 rounded-full overflow-hidden mb-4">
+      <div class="h-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full animate-pulse" style="width: 56%;"></div>
+    </div>
+
+    <div class="text-right text-sm text-indigo-600 font-medium mb-6">
+      Estimasi selesai: Agustus 2025
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank"
+       class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl font-semibold transition duration-300">
+      <!-- WhatsApp SVG Logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M12.004 2.003c-5.522 0-9.997 4.475-9.997 9.996 0 1.76.46 3.465 1.328 4.967L2.003 22l5.25-1.37a9.974 9.974 0 004.752 1.208h.001c5.522 0 9.997-4.475 9.997-9.996s-4.475-9.997-9.996-9.997zm0 17.992a7.973 7.973 0 01-4.06-1.112l-.29-.17-3.11.812.832-3.032-.186-.311a7.972 7.972 0 01-1.219-4.21c0-4.412 3.587-8 8-8s8 3.588 8 8-3.588 8-8 8zm4.447-5.406c-.245-.122-1.454-.717-1.68-.797-.226-.08-.39-.122-.555.123-.163.244-.636.797-.78.961-.143.163-.287.183-.532.061-.244-.122-1.032-.38-1.966-1.213-.726-.647-1.215-1.447-1.358-1.691-.143-.244-.015-.377.107-.499.11-.11.244-.287.367-.429.122-.143.163-.245.245-.408.082-.163.041-.306-.02-.428-.061-.122-.555-1.34-.76-1.832-.2-.48-.405-.415-.555-.424l-.47-.008c-.163 0-.428.061-.653.306-.224.244-.857.837-.857 2.04s.877 2.368 1 2.532c.122.163 1.728 2.637 4.193 3.699.586.253 1.044.403 1.401.515.589.187 1.126.161 1.55.098.473-.07 1.454-.594 1.66-1.17.204-.573.204-1.064.143-1.17-.061-.102-.224-.163-.47-.285z"/>
+      </svg>
+    Saluran  WhatsApp
+    </a>
+
+  </div>
+
+</body>
+</html>
